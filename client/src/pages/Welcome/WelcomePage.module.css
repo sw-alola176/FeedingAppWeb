@@ -1,0 +1,12 @@
+* {
+  background-image: url("../../assets/welcome-page/main-wallpaper.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#page-container {
+  width: 100vw;
+  height: 100vh;
+}
