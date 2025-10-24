@@ -1,6 +1,7 @@
 import WelcomePage from "./pages/Welcome/WelcomePage"
 import HomePage from "./pages/Home/HomePage"
 import NotFoundPage from "./pages/NotFoundPage"
+import SignInPage from "./pages/SignIn/SignUpPage"
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -11,6 +12,10 @@ function App() {
       path: '/',
       element: <WelcomePage />,
       errorElement: <NotFoundPage />
+    },
+    {
+      path: '/sign-up',
+      element: <SignInPage />
     },
     {
       path: '/home',
