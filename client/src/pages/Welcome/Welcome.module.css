@@ -1,5 +1,5 @@
-* {
-  background-image: url("../../assets/welcome-page/main-wallpaper.jpg");
+.welcome-page-bg {
+  background-image: url("../../assets/welcome-page/welcome-bg.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -26,5 +26,5 @@
   width: 40vw;
   height: 45px;
   padding: 10px;
-  font-weight: 500;
+  font-weight: 400;
 }
