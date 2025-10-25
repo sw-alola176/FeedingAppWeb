@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -30,11 +31,12 @@
   width: 260px;
   margin: none;
   border: 1px solid #ccc;
-  border-bottom: 2px solid #932A98;
+  border-bottom: 1px solid #932A98;
   border-top: none;
   border-right: none;
   border-left: none;
   padding: 5px 10px;
+  padding-left: 2rem;
   font-size: 16px;
 }
 

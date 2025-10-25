@@ -11,17 +11,21 @@ const SignInPage = () => {
     <>
       <div 
       id="signup-page-container" 
-      className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#ffffffd1]`}>
+      className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
         <div 
         id="form-container"
         className={`${styles["form-container"]}`}>
           <h1 className='font-bold text-3xl mt-5 text-[#932A98]'>Sign Up</h1>
-          <form id="signup-form" className={`h-[70%] w-full`} onSubmit={handleSubmit}>
+          <form 
+            id="signup-form" 
+            className={`h-[85%] w-full flex flex-col items-center justify-center`} 
+            onSubmit={handleSubmit}
+          >
             <input 
               type="text" 
               id="username" 
               placeholder='Enter your full name'
-              className={`mt-8 border-b w-[80%] h-[8%] pl-10`}
+              className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
               required
               onInvalid={(e) => e.target.setCustomValidity('Please type in your name.')}
               onInput={(e) => e.target.setCustomValidity('')} 
@@ -30,7 +34,7 @@ const SignInPage = () => {
               type="email" 
               id="email" 
               placeholder='Enter an e-mail'
-              className={`mt-8 border-b w-[80%] h-[8%] pl-10`}
+              className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
               required
               onInvalid={(e) => e.target.setCustomValidity('Please type in a valid e-mail.')}
               onInput={(e) => e.target.setCustomValidity('')} 
@@ -39,7 +43,7 @@ const SignInPage = () => {
               type="password" 
               id="password" 
               placeholder='Enter a password'
-              className={`mt-8 border-b w-[80%] h-[8%] pl-10`}
+              className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
               required
               onInvalid={(e) => e.target.setCustomValidity('Please type in a password.')}
               onInput={(e) => e.target.setCustomValidity('')} 
@@ -48,9 +52,9 @@ const SignInPage = () => {
 
             <button 
               type='submit'
-              className={`ml-5 mt-10 w-70 h-15 font-medium ${styles['submit-btn']}`}
+              className={`mt-10 w-70 h-15 font-medium ${styles['submit-btn']}`}
             >Sign Up</button>
-            <p className='text-[13px] ml-13 mt-2'>Already have an account?  
+            <p className='text-[13px] mt-5'>Already have an account?  
               <Link to={'/login'}><span className='font-bold text-[#932A98]'> Login</span></Link></p>
           </form>
           
