@@ -25,7 +25,7 @@ const WelcomePage = () => {
         <Link to='/sign-up'><button id="signup-btn" className={styles["signup-btn"]}>
           Sign up
         </button></Link>
-        <Link to='#'><button id="login-btn" className={styles["login-btn"]}>
+        <Link to='/log-in'><button id="login-btn" className={styles["login-btn"]}>
           Log in
         </button></Link>
       </div>
