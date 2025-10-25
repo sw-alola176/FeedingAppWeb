@@ -48,10 +48,10 @@ const SignInPage = () => {
 
             <button 
               type='submit'
-              className={`ml-10 mt-10 w-60 h-15 font-medium ${styles['submit-btn']}`}
+              className={`ml-5 mt-10 w-70 h-15 font-medium ${styles['submit-btn']}`}
             >Sign Up</button>
-            <p className='text-[13px] ml-13 mt-2'>Already have an account? 
-              <Link to={'/log-in'}><span className='font-bold text-[#932A98]'>Login</span></Link></p>
+            <p className='text-[13px] ml-13 mt-2'>Already have an account?  
+              <Link to={'/login'}><span className='font-bold text-[#932A98]'> Login</span></Link></p>
           </form>
           
           <hr className='w-[80%]'></hr>

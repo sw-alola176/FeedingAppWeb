@@ -1,7 +1,7 @@
 .form-container {
   border: 2px solid #932A98;
   width: 75vw;
-  height: 75vh;
+  height: 65vh;
   border-radius: 30px;
   display: flex;
   flex-direction: column;

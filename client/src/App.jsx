@@ -15,11 +15,11 @@ function App() {
       errorElement: <NotFoundPage />
     },
     {
-      path: '/sign-up',
+      path: '/signup',
       element: <SignInPage />
     },
     {
-      path: '/log-in',
+      path: '/login',
       element: <LogInPage />
     },
     {

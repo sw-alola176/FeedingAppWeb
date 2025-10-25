@@ -22,10 +22,10 @@ const WelcomePage = () => {
         </p>
       </div>
       <div id="button-container" className='mt-[5vh] flex flex-row items-center justify-center gap-6 '>
-        <Link to='/sign-up'><button id="signup-btn" className={styles["signup-btn"]}>
+        <Link to='/signup'><button id="signup-btn" className={styles["signup-btn"]}>
           Sign up
         </button></Link>
-        <Link to='/log-in'><button id="login-btn" className={styles["login-btn"]}>
+        <Link to='/login'><button id="login-btn" className={styles["login-btn"]}>
           Log in
         </button></Link>
       </div>
