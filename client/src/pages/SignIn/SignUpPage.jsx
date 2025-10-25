@@ -30,6 +30,8 @@ const SignInPage = () => {
           />
           <p className='pl-10 text-[12px]'>Must be at least 8 characters</p>
         </form>
+
+        <div></div>
       </div>
     </div>
   )
