@@ -7,7 +7,7 @@ body {
   height: 100vh;
 }
 
-form {
+.login-form {
   display: flex;
   flex-direction: column;
   place-content: center;
@@ -19,14 +19,14 @@ form {
   padding: 20px 16px;
 }
 
-form h1 {
+.login-form h1 {
   text-align: center;
   color: rgba(147, 42, 152, 1);
   font-weight: 500;
   font-size: x-large;
 }
 
-form input {
+.login-form input {
   height: 35px;
   width: 260px;
   margin: none;
@@ -39,7 +39,7 @@ form input {
   font-size: 16px;
 }
 
-form button {
+.login-form button {
   height: 40px;
   width: 100%;
   margin: 0px;
@@ -57,31 +57,31 @@ input[type="checkbox"] {
   width: 15px;
 }
 
-form input::placeholder {
+.login-form input::placeholder {
   padding: 0px;
   font-size: 15px;
 }
 
-form div {
+.login-form div {
   display: flex;
   width:100%;
   align-items: center;
   justify-content: center;
 }
 
-form div input[type="checkbox"] {
+.login-form div input[type="checkbox"] {
   margin-right: 10px;
   background-color: #932A98;
   outline: none;
   border: none;
 }
 
-form p {
+.login-form p {
   text-align: center;
   font-size: 14px;
 }
 
-form span {
+.login-form span {
   color: #932A98;
   font-weight: 500;
   text-align: center;

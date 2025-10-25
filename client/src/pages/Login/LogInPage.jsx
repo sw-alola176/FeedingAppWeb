@@ -1,13 +1,11 @@
-
-import React from 'react'
 import { Link } from 'react-router-dom'
-import './Login.module.css'
+import styles from './Login.module.css'
 
 const LoginInPage = () => {
   return (
-    <div id="login">
+    <div id="login-container">
 
-      <form id="login-form">
+      <form id="login-form" className={styles["login-form"]}>
 
         <h1>Login</h1>
 
