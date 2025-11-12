@@ -23,14 +23,16 @@
 .login-form h1 {
   text-align: center;
   color: rgba(147, 42, 152, 1);
-  font-weight: 500;
+  font-weight: 700;
   font-size: x-large;
+  margin-bottom: 2rem;
 }
 
 .login-form input {
   height: 35px;
   width: 85%;
   margin: none;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-bottom: 1px solid #932A98;
   border-top: none;

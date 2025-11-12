@@ -41,7 +41,7 @@ const LoginInPage = () => {
 
           <div>
             <input type="checkbox" id="remember-me" onClick={toggleVisible}/>
-            <label className='text-sm flex '> Remember these login details </label>
+            <label className='text-sm flex'> Remember these login details </label>
           </div>
           
           <p className='text-[13px] ml-12'>
