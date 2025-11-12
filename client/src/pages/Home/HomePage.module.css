@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  place-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+@media screen {
+  
+}
