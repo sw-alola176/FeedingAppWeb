@@ -135,7 +135,7 @@ const HomePage = () => {
         </section>
 
       </main>
-      {/* ✅ Draggable + Clickable Menu (works on mobile and desktop) */}
+    
     <div
       className='flex items-center gap-4'
       onMouseDown={(e) => {
@@ -164,7 +164,7 @@ const HomePage = () => {
         padding: '10px',
         borderRadius: '10px',
         userSelect: 'none',
-        touchAction: 'none', // 🚫 prevents scrolling while dragging
+        touchAction: 'none'
       }}
     >
       <FaList className='text-2xl' />
