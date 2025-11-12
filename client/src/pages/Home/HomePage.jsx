@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import img from "../../assets/home-page/Ellipse 1.png"
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { FaList } from 'react-icons/fa';
-import { SwitchProvider } from '../../switchLight';
+import { SwitchProvider } from '../../components/switchLight';
 import { useContext, useState, useEffect } from 'react';
 
 const HomePage = () => {
