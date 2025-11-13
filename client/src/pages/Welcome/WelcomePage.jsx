@@ -9,10 +9,12 @@ const WelcomePage = () => {
       id="welcome-page-container" 
       className={`flex flex-col items-center justify-center-safe w-screen h-screen ${styles["welcome-page-bg"]}`}>
       <div id="title-box" className='w-max mt-[15vh]'> 
-        <img 
-          src={welcomeImage}
-          className='rounded-full w-[140px] h-auto ml-3.5'
-        />
+        <Link to={'/home'}>
+          <img 
+            src={welcomeImage}
+            className='rounded-full w-[140px] h-auto ml-3.5'
+          />
+        </Link>
         <p className='ml-3.5 mt-5 font-medium text-2xl'>Feeding App</p>
       </div>
       <div id="description-text" className='mt-[18vh] w-80 ml-2.5'>

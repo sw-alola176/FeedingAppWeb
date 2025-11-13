@@ -1,21 +1,21 @@
 import './HomePage.module.css'
 import { Link, NavLink } from "react-router-dom"
 import img from "../../assets/home-page/Ellipse 1.png"
-import { SwitchProvider } from '../../components/switchLight';
+import { SwitchProvider } from '../../components/switchLight.jsx';
 import { useContext } from 'react';
 import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 import MenuBar from '../../components/MenuBar.jsx';
 
 const HomePage = () => {
 
-  const {switchLight} = useContext(SwitchProvider)
+  const {switchLight} = useContext(SwitchProvider);
   const style = {
     backgroundColor: switchLight ? "black": "white",
     color: switchLight ? "white": "#932A98"
-  }
+  };
 
   const userData = {
-    name: "Kelvin Donye",
+    name: "Hiba Abdul",
     balance: 100000
   }
 
@@ -54,7 +54,7 @@ const HomePage = () => {
 
   return (
     <>
-    <div style={style} className='w-full h-full m-0 self-center justify-self-center place-content-center  relative p-3 flex flex-col'>
+    <div style={style} className='max-w-full h-full m-0 self-center justify-self-center place-content-center  relative p-3 flex flex-col'>
       <ThemeSwitch />
       <header className='text-center self-center gap-4 w-fit'>
         <div className="flex items-center justify-center">
@@ -89,7 +89,7 @@ const HomePage = () => {
                   className='size-[70px] mr-0'
                   src={data.image}
                   alt="food place"/>
-                <p className='text-[16px] text-nowrap mt-1.5 w-100'> {data.name}</p>
+                <p className='text-[16px] text-nowrap mt-1.5'> {data.name}</p>
               </div>
             )
           })}

@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styles from './SignUpPage.module.css'
 import { Link } from 'react-router-dom'
+import { SwitchProvider } from '../../components/switchLight.jsx';
+import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 
 const SignInPage = () => {
 
@@ -35,12 +37,20 @@ const SignInPage = () => {
     }, 1000)
   }
 
+  const {switchLight} = useContext(SwitchProvider);
+    const style = {
+      backgroundColor: switchLight ? "black": "white",
+      color: switchLight ? "white": "#932A98"
+    };
+
   return (
     <>
       {!isLoading 
         && <div 
         id="signup-page-container" 
+        style={style}
         className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
+          <ThemeSwitch />
           <div 
           id="form-container"
           className={`${styles["form-container"]}`}>

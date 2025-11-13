@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import styles from './Login.module.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { SwitchProvider } from '../../components/switchLight.jsx';
+import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 
 const LoginInPage = () => {
 
@@ -25,10 +27,17 @@ const LoginInPage = () => {
     setIsVisible(!isVisible);
   };
 
+  const {switchLight} = useContext(SwitchProvider);
+  const style = {
+    backgroundColor: switchLight ? "black": "white",
+    color: switchLight ? "white": "#932A98"
+  };
+
 
   return (
     <>
-      <div id="login-container" className={styles["login-container"]}>
+      <div id="login-container" className={styles["login-container"]} style={style}>
+        <ThemeSwitch />
         <form id="login-form" className={styles["login-form"]} onSubmit={handleSubmit}>
           <h1>Login</h1>
           <input 
