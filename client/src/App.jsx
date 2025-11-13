@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 function App() {
 
   const [switchLight, setSwitchLight] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   const router = createBrowserRouter([
     {
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-    <SwitchProvider.Provider value={{switchLight, setSwitchLight}}>
+    <SwitchProvider.Provider value={{switchLight, setSwitchLight, showMenu, setShowMenu}}>
       <RouterProvider router={router} />
     </SwitchProvider.Provider>
     </>
