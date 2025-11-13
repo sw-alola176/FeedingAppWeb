@@ -5,11 +5,10 @@ import { SwitchProvider } from '../../components/switchLight';
 import { useContext } from 'react';
 import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 import MenuBar from '../../components/MenuBar.jsx';
-import { useEffect } from 'react';
 
 const HomePage = () => {
 
-  const {switchLight, setSwitchLight} = useContext(SwitchProvider)
+  const {switchLight} = useContext(SwitchProvider)
   const style = {
     backgroundColor: switchLight ? "black": "white",
     color: switchLight ? "white": "#932A98"
@@ -18,11 +17,7 @@ const HomePage = () => {
   const userData = {
     name: "Kelvin Donye",
     balance: 100000
-  };
-
-  useEffect(() => {
-    console.log(`Current path: ${location.pathname}`)
-  })
+  }
 
   const restaurants = [
     {name: "Chicken Republic",
@@ -59,7 +54,7 @@ const HomePage = () => {
 
   return (
     <>
-    <div style={style} className={`w-full h-full m-0  self-center justify-self-center place-content-center  relative p-3 flex flex-col `}>
+    <div style={style} className='w-full h-full m-0 self-center justify-self-center place-content-center  relative p-3 flex flex-col'>
       <ThemeSwitch />
       <header className='text-center self-center gap-4 w-fit'>
         <div className="flex items-center justify-center">
