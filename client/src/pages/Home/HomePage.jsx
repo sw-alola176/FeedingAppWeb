@@ -54,7 +54,7 @@ const HomePage = () => {
 
   return (
     <>
-    <div style={style} className='w-full h-full m-0 self-center justify-self-center place-content-center  relative p-3 flex flex-col'>
+    <div style={style} className='w-full h-full m-0 self-center justify-self-center place-self-center  relative p-3 flex flex-col'>
       <ThemeSwitch />
       <header className='text-center self-center gap-4 w-fit'>
         <div className="flex items-center justify-center">

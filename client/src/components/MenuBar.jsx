@@ -26,8 +26,8 @@ const MenuBar = () => {
           <div className='bg-[#932A98] rounded-4xl p-2'>
             <ul className='flex gap-4 text-[#C578C8E5]'>
               <li className='hover:text-[#932A98]'><NavLink style={({isActive}) => (isActive ? homeActiveStyle: null)} to='/home'>Home</NavLink></li>
-              <li className='hover:text-[#932A98]'><NavLink style={({isActive}) => (isActive ? historyActiveStyle: null)} to='/'>History</NavLink></li>
-              <li className='hover:text-[#932A98]'><NavLink style={({isActive}) => (isActive ? settingsActiveStyle: null)} to='/'>Settings</NavLink></li>
+              <li className='hover:text-[#932A98]'><NavLink style={({isActive}) => (isActive ? historyActiveStyle: null)} to='/history'>History</NavLink></li>
+              <li className='hover:text-[#932A98]'><NavLink style={({isActive}) => (isActive ? settingsActiveStyle: null)} to='/settings'>Settings</NavLink></li>
             </ul>
           </div>
         ) : null}
