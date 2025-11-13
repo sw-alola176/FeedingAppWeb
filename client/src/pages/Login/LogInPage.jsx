@@ -5,6 +5,21 @@ import { useState } from 'react'
 const LoginInPage = () => {
 
   const [isVisible, setIsVisible] = useState(false);
+  const [user, setUser] = useState({email: '', password: ''});
+
+  function handleEmailChange (e) {
+    setUser(u => ({...u, email: e.target.value}))
+  }
+
+  function handlePasswordChange (e) {
+    setUser(u => ({...u, password: e.target.value}))
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    console.log(user)
+  }
 
   const toggleVisible = () => {
     setIsVisible(!isVisible);
@@ -14,14 +29,15 @@ const LoginInPage = () => {
   return (
     <>
       <div id="login-container" className={styles["login-container"]}>
-        <form id="login-form" className={styles["login-form"]}>
+        <form id="login-form" className={styles["login-form"]} onSubmit={handleSubmit}>
           <h1>Login</h1>
           <input 
             type="text" 
             id="email" 
-            placeholder='Enter your username'
+            placeholder='Enter your email'
             required
-            onInvalid={(e) => e.target.setCustomValidity('Please type in your username.')}
+            onChange={handleEmailChange}
+            onInvalid={(e) => e.target.setCustomValidity('Please type in your email.')}
             onInput={(e) => e.target.setCustomValidity('')}
           />
           <input 
@@ -29,6 +45,7 @@ const LoginInPage = () => {
             id="password" 
             placeholder='Enter your password'
             required
+            onChange={handlePasswordChange}
             onInvalid={(e) => e.target.setCustomValidity('Please type in your password.')}
             onInput={(e) => e.target.setCustomValidity('')}
           />
@@ -38,11 +55,6 @@ const LoginInPage = () => {
             type="submit"
             className={`w-full h-15 bg-[#932A98] text-white cursor-pointer text-[18px] font-medium`}
           >Login</button>
-
-          <div>
-            <input type="checkbox" id="remember-me" onClick={toggleVisible}/>
-            <label className='text-sm flex'> Remember these login details </label>
-          </div>
           
           <p className='text-[13px] ml-12'>
             Not a member? <span className='font-bold text-[#932A98]'><Link to="/signup">Sign up</Link></span>

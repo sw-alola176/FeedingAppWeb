@@ -28,8 +28,8 @@ const SignInPage = () => {
         method: 'POST',
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(user)
-      }).then(() => {
-        console.log("User successfully created")
+      }).then((res) => {
+        console.log(res.json());
         setIsLoading(false)
       })
     }, 1000)
@@ -93,11 +93,11 @@ const SignInPage = () => {
                 <Link to={'/login'}><span className='font-bold text-[#932A98]'> Login</span></Link></p>
             </form>
             
-            <hr className='w-[80%]'></hr>
+            {/* <hr className='w-[80%]'></hr> */}
   
-            <button 
+            {/* <button 
               className={`mt-10 mb-8 w-60 h-15 font-medium ${styles['google-btn']}`}
-              >Sign in with Google</button>
+              >Sign in with Google</button> */}
           </div>
   
           <p className='text-[13px] pb-15 ml-10 mr-10'>
@@ -106,7 +106,10 @@ const SignInPage = () => {
           </p>
         </div>
 
-       || <div>Loading...</div>}
+       || 
+        <div className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
+          Loading...
+        </div>}
     </>
   )
 };
