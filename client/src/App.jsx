@@ -3,6 +3,7 @@ import HomePage from "./pages/Home/HomePage"
 import NotFoundPage from "./pages/NotFoundPage"
 import SignInPage from "./pages/SignIn/SignUpPage"
 import LogInPage from "./pages/Login/LogInPage"
+import SettingsPage from "./pages/Settings/settingsPage"
 import { SwitchProvider } from "./components/switchLight"
 import { useState } from "react"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -29,6 +30,10 @@ function App() {
     {
       path: '/home',
       element: <HomePage />
+    },
+    {
+      path: '/settings',
+      element: <SettingsPage />
     }
   ])
 
