@@ -23,8 +23,8 @@ const MenuBar = () => {
         {showMenu ? <FaX className={`text-2xl text-white bg-[#932A98] w-12 h-12 border-[#932A98] p-2 rounded-3xl`} /> :
         <FaList className='text-white bg-[#932A98] border-[#932A98] border-0 rounded-3xl text-2xl p-2 w-12 h-12' />}
         {showMenu ? (
-          <div className='bg-[#932A98] rounded-4xl p-2'>
-            <ul className='flex gap-4 text-[#C578C8E5]'>
+          <div className='bg-[#932A98] rounded-4xl p-4 flex justify-between'>
+            <ul className='flex gap-5 text-[#C578C8E5]'>
               <li className='hover:text-[#932A98]'>
                 <NavLink style={({isActive}) => isActive ? homeActiveStyle: null} to='/home'>Home</NavLink>
               </li>

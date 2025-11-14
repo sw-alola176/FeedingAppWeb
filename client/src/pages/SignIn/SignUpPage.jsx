@@ -38,18 +38,23 @@ const SignInPage = () => {
   }
 
   const {switchLight} = useContext(SwitchProvider);
-    const style = {
+
+    const pageDarkstyle = {
       backgroundColor: switchLight ? "black": "white",
       color: switchLight ? "white": "#932A98"
     };
+
+    const inputDarkStyle = {
+      borderBottom: switchLight ? "1px solid #3b3b3b" : "1px solid #932A98"
+    }
 
   return (
     <>
       {!isLoading 
         && <div 
         id="signup-page-container" 
-        style={style}
-        className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
+        style={pageDarkstyle}
+        className={`flex flex-col items-center justify-between w-screen h-screen  bg-[#f5f5f5]`}>
           <ThemeSwitch />
           <div 
           id="form-container"
@@ -65,7 +70,8 @@ const SignInPage = () => {
                 id="username" 
                 name="username"
                 placeholder='Enter your full name'
-                className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
+                style={inputDarkStyle}
+                className={`mt-8 w-[80%] h-[8%] pl-10`}
                 required
                 onChange={handleNameChange}
                 onInvalid={(e) => e.target.setCustomValidity('Please type in your name.')}
@@ -76,7 +82,8 @@ const SignInPage = () => {
                 id="email" 
                 name="email"
                 placeholder='Enter an e-mail'
-                className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
+                style={inputDarkStyle}
+                className={`mt-8 w-[80%] h-[8%] pl-10`}
                 required
                 onChange={handleEmailChange}
                 onInvalid={(e) => e.target.setCustomValidity('Please type in a valid e-mail.')}
@@ -87,7 +94,8 @@ const SignInPage = () => {
                 id="password" 
                 name="password"
                 placeholder='Enter a password'
-                className={`mt-8 border-b border-[#932A98] w-[80%] h-[8%] pl-10`}
+                style={inputDarkStyle}
+                className={`mt-8 w-[80%] h-[8%] pl-10`}
                 required
                 onChange={handlePasswordChange}
                 onInvalid={(e) => e.target.setCustomValidity('Please type in a password.')}

@@ -21,34 +21,44 @@ const HomePage = () => {
 
   const restaurants = [
     {name: "Chicken Republic",
-      image: img
+      image: img,
+      id: 1
     }, 
     {name: "KFC",
-      image: img
+      image: img,
+      id: 2
     },
     {name: "Betajollof",
-      image: img
+      image: img,
+      id: 3
     },
     {name: "Burger King",
-      image: img
+      image: img,
+      id: 4
     },
     {name: "The place",
-      image: img
+      image: img,
+      id: 5
     },
     {name: "Domino's Pizza",
-      image: img
+      image: img,
+      id: 6
     },
     {name: "Mega Chicken",
-      image: img
+      image: img,
+      id: 7
     },
     {name: "Cold Stone",
-      image: img
+      image: img,
+      id: 8
     },
     {name: "Dodo Pizza",
-      image: img
+      image: img,
+      id: 9
     },
     {name: "Food co",
-      image: img
+      image: img,
+      id: 10
     }
   ]
 
@@ -73,7 +83,11 @@ const HomePage = () => {
 
         <p  className='bg-[#932A98] cursor-pointer text-white font-bold rounded-[10px] h-[53px] w-55 pt-3'>#{userData.balance}</p>
 
-        <p className={`${switchLight ? 'text-white': 'text-black'}`}>Pick a restaurant of your choice to purchase a <br /> <Link to="/coupon" className={`${switchLight ? 'text-[#932A98]' : 'text-[#932A98]'}`}>coupon</Link></p>
+        <p className={`${switchLight ? 'text-white': 'text-black'}`}>Pick a restaurant of your choice to purchase a <br />
+         <Link to="/coupon" className={`${switchLight ? 'text-[#932A98]' : 'text-[#932A98]'}`}>
+          coupon
+         </Link>
+        </p>
       </header>
       
       <main className='mt-2.5 w-full m-0 '>
@@ -81,15 +95,17 @@ const HomePage = () => {
           <p className='text-[#932A98] text-3xl font-bold'>Available Restaurants</p>
         </div>
 
-        <section className='flex flex-wrap justify-center gap-5 mt-5'>
-          {restaurants.map(data => {
+        <section  className='flex flex-wrap justify-center gap-5 mt-5'>
+          {restaurants.map(restaurant => {
             return (
-              <div key={data.name} className={`border-3 size-[150px] w-[170px] ${switchLight ? 'text-white bg-black': ''} text-center pt-4 pb-4 pr-2 pl-2 rounded-[30px] flex flex-col items-center border-[#932A98]`}>
+              <div 
+                key={restaurant.id} 
+                className={`border-3 h-35 w-40 ${switchLight ? 'text-white bg-black': ''} text-center pt-4 pb-4 pr-2 pl-2 rounded-[30px] flex flex-col items-center border-[#932A98]`}>
                 <img
                   className='size-[70px] mr-0'
-                  src={data.image}
+                  src={restaurant.image}
                   alt="food place"/>
-                <p className='text-[16px] text-nowrap mt-1.5'> {data.name}</p>
+                <p className='text-[16px] text-nowrap mt-1.5'> {restaurant.name}</p>
               </div>
             )
           })}
