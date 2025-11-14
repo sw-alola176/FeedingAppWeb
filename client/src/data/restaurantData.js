@@ -4,7 +4,7 @@ const restaurants = [
   {name: "Chicken Republic",
     image: img,
     id: 1
-  }, 
+  },
   {name: "KFC",
     image: img,
     id: 2
