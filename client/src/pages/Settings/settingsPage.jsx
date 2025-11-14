@@ -26,7 +26,7 @@ const SettingsPage = () => {
         <div className='border-[#932A98] flex justify-center rounded-full size-40 border-4'>
           <img className='size-30 self-center object-cover' src={img} alt='picture of restaurants' />
         </div>
-        <div className='text-[#932A98] text-2xl flex flex-col w-3xs'>
+        <div className='text-[#932A98] text-3xl flex flex-col w-3xs'>
           <p className='self-start font-bold'>Alola Oshodi</p>
           <p className=' text-[18px] self-end'>08064458326</p>
         </div>
