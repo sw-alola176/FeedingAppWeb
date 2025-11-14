@@ -60,7 +60,6 @@ const SettingsPage = () => {
         <button disabled={logout || del ? true: false} onClick={() => setLogout(prev => !prev)} style={{paddingLeft: '33px'}} className='border-t-2 w-full cursor-pointer flex items-center justify-start border-b-2 border-[#932A98] h-18'>Log out</button>
       </div>
 
-<<<<<<< HEAD
       {del ||
          logout ? blocks.map(data => (<div className='bg-[#C578C866] border-[#932A98] border-2 backdrop-blur-[10px] w-[350px] h-[205px] p-10 flex flex-col justify-center gap-4 items-center rounded-3xl absolute self-center top-40 bottom-50 place-self-center z-10'>
         <p className={`${switchLight ? 'text-white font-bold': ''} text-[20px] text-center`}>{data.texts}</p>
@@ -77,13 +76,6 @@ const SettingsPage = () => {
           >
             {data.buttonTwo}
           </button>
-=======
-      {del || logout ? blocks.map(data => (<div className='bg-[#C578C866] border-[#932A98] border-2 backdrop-blur-[10px] w-[350px] h-[205px] p-10 flex flex-col justify-center gap-4 items-center rounded-3xl absolute self-center top-40 bottom-50 place-self-center z-10'>
-        <p className={`${switchLight ? 'text-white font-bold': ''} text-[20px] text-center`}>{data.texts}</p>
-        <div className='flex gap-4'>
-          <button className={`bg-white w-[90px] font-bold h-10 rounded-2xl ${!switchLight ? 'active:bg-[#932A98] active:text-white': 'active:bg-black active:text-white'}`}>{data.buttonOne}</button>
-          <button onClick={() => del ? setDel(prev => !prev): setLogout(prev => !prev)} className={`bg-white w-[90px] font-bold h-10 rounded-2xl ${!switchLight ? 'active:bg-[#932A98] active:text-white': 'active:bg-black active:text-white'}`}>{data.buttonTwo}</button>
->>>>>>> 3733f8edab2e60e74cc45ed0aa8a30b35f20b916
         </div>
       </div>)) : null}
 
