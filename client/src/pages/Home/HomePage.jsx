@@ -10,7 +10,7 @@ import img from "../../assets/home-page/Ellipse 1.png"
 const HomePage = () => {
 
   const {switchLight} = useContext(SwitchProvider);
-  
+
   const style = {
     backgroundColor: switchLight ? "black": "white",
     color: switchLight ? "white": "#932A98"
@@ -18,8 +18,9 @@ const HomePage = () => {
 
   const userData = {
     name: "Hiba Abdul",
-    balance: 100000
-  }
+    balance: 100000,
+    phone: "08103944029"
+  };
 
   const restaurants = [...restaurantData];
 
