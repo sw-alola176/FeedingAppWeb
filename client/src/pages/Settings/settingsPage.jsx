@@ -31,7 +31,7 @@ const SettingsPage = () => {
       style={{paddingTop: '20px'}} 
       className={`${switchLight ? 'bg-black' : ''} relative place-self-center h-screen w-screen flex flex-col gap-10`}
     >
-      <div className='flex self-center items-center gap-4'>
+      <div className='flex self-center items-center gap-4 w-full'>
         <div className='border-[#932A98] flex justify-center rounded-full size-40 border-4 ml-2'>
           <img className='size-30 self-center object-cover' src={img} alt='picture of restaurants' />
         </div>
@@ -66,7 +66,10 @@ const SettingsPage = () => {
         
         <div className='flex gap-4'>
 
-          <button className={`bg-white w-[90px] font-bold h-10 rounded-2xl ${!switchLight ? 'active:bg-[#932A98] active:text-white': 'active:bg-black active:text-white'}`}>{data.buttonOne}</button>
+          <button 
+          className={`bg-white w-[90px] font-bold h-10 rounded-2xl ${!switchLight ? 'active:bg-[#932A98] active:text-white': 'active:bg-black active:text-white'}`}>
+            {data.buttonOne}
+          </button>
           <button 
           onClick={() => del ? setDel(prev => !prev): setLogout(prev => !prev)} 
           className={`bg-white w-[90px] font-bold h-10 rounded-2xl ${!switchLight ? 'active:bg-[#932A98] active:text-white': 'active:bg-black active:text-white'}`}
