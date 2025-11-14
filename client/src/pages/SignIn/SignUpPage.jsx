@@ -6,7 +6,7 @@ import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 
 const SignInPage = () => {
 
-  const [user, setUser] = useState({name: '', email: '', password: ''});
+  const [user, setUser] = useState({name: '', email: '', password: '', phone: ''});
   const [isLoading, setIsLoading] = useState(false);
 
   function handleNameChange(e) {
@@ -19,6 +19,10 @@ const SignInPage = () => {
 
   function handlePasswordChange(e) {
     setUser(u => ({...u, password: e.target.value}))
+  }
+
+  function handlePhoneChange(e) {
+    setUser(u => ({...u, phone: e.target.value}))
   }
 
   const handleSubmit = (e) => {
@@ -87,6 +91,18 @@ const SignInPage = () => {
                 required
                 onChange={handleEmailChange}
                 onInvalid={(e) => e.target.setCustomValidity('Please type in a valid e-mail.')}
+                onInput={(e) => e.target.setCustomValidity('')} 
+              />
+              <input 
+                type="text" 
+                id="phone" 
+                name="phone"
+                placeholder='Enter your phone number'
+                style={inputDarkStyle}
+                className={`mt-8 w-[80%] h-[8%] pl-10`}
+                required
+                onChange={handlePhoneChange}
+                onInvalid={(e) => e.target.setCustomValidity('Please type in your phone number.')}
                 onInput={(e) => e.target.setCustomValidity('')} 
               />
               <input 

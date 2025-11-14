@@ -1,14 +1,16 @@
 import './HomePage.module.css'
 import { Link, NavLink } from "react-router-dom"
-import img from "../../assets/home-page/Ellipse 1.png"
 import { SwitchProvider } from '../../components/switchLight.jsx';
 import { useContext } from 'react';
 import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 import MenuBar from '../../components/MenuBar.jsx';
+import restaurantData from "../../data/restaurantData.js"
+import img from "../../assets/home-page/Ellipse 1.png"
 
 const HomePage = () => {
 
   const {switchLight} = useContext(SwitchProvider);
+
   const style = {
     backgroundColor: switchLight ? "black": "white",
     color: switchLight ? "white": "#932A98"
@@ -16,51 +18,11 @@ const HomePage = () => {
 
   const userData = {
     name: "Hiba Abdul",
-    balance: 100000
-  }
+    balance: 100000,
+    phone: "08103944029"
+  };
 
-  const restaurants = [
-    {name: "Chicken Republic",
-      image: img,
-      id: 1
-    }, 
-    {name: "KFC",
-      image: img,
-      id: 2
-    },
-    {name: "Betajollof",
-      image: img,
-      id: 3
-    },
-    {name: "Burger King",
-      image: img,
-      id: 4
-    },
-    {name: "The place",
-      image: img,
-      id: 5
-    },
-    {name: "Domino's Pizza",
-      image: img,
-      id: 6
-    },
-    {name: "Mega Chicken",
-      image: img,
-      id: 7
-    },
-    {name: "Cold Stone",
-      image: img,
-      id: 8
-    },
-    {name: "Dodo Pizza",
-      image: img,
-      id: 9
-    },
-    {name: "Food co",
-      image: img,
-      id: 10
-    }
-  ]
+  const restaurants = [...restaurantData];
 
   return (
     <>
