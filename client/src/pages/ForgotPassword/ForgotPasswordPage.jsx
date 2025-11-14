@@ -41,7 +41,7 @@ const ForgotPasswordPage = () => {
 
           <h1 className='text-xl text-center text-[#932A98]'>Encryption password change</h1>
           <p className='text-center'>Passwords must be at least 
-            <span className='text-[#932A98] font-bold'>eight </span>
+            <span className='text-[#932A98] font-bold'> eight </span>
             characters long
           </p>
 
