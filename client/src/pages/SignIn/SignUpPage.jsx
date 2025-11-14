@@ -2,7 +2,6 @@ import { useState, useContext } from 'react';
 import styles from './SignUpPage.module.css'
 import { Link } from 'react-router-dom'
 import { SwitchProvider } from '../../components/switchLight.jsx';
-import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 
 const SignInPage = () => {
 
@@ -59,7 +58,6 @@ const SignInPage = () => {
         id="signup-page-container" 
         style={pageDarkstyle}
         className={`flex flex-col items-center justify-between w-screen h-screen  bg-[#f5f5f5]`}>
-          <ThemeSwitch />
           <div 
           id="form-container"
           className={`${styles["form-container"]}`}>
@@ -121,9 +119,9 @@ const SignInPage = () => {
   
               <button 
                 type='submit'
-                className={`mt-10 w-70 h-15 font-medium ${styles['submit-btn']}`}
+                className={`mt-10 w-60 h-20 font-medium ${styles['submit-btn']}`}
               >Sign Up</button>
-              <p className='text-[13px] mt-5'>Already have an account?  
+              <p className='text-[13px] mt-8 mb-10'>Already have an account?  
                 <Link to={'/login'}><span className='font-bold text-[#932A98]'> Login</span></Link></p>
             </form>
             
@@ -134,7 +132,7 @@ const SignInPage = () => {
               >Sign in with Google</button> */}
           </div>
   
-          <p className='text-[13px] pb-15 ml-10 mr-10'>
+          <p className='text-[13px] pb-7 ml-10 mr-10 '>
             By signing up, you agree to our <span className='font-bold text-[#932A98]'>Terms of service</span> and
             <span className='font-bold text-[#932A98]'> Privacy Policy</span>
           </p>
