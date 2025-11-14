@@ -7,6 +7,7 @@ import SettingsPage from "./pages/Settings/settingsPage"
 import { SwitchProvider } from "./components/switchLight"
 import { useState } from "react"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ForgotPasswordPage from "./pages/ForgotPassword/ForgotPasswordPage"
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
     {
       path: '/settings',
       element: <SettingsPage />
+    },
+    {
+      path: '/forgot',
+      element: <ForgotPasswordPage />
     }
   ])
 
