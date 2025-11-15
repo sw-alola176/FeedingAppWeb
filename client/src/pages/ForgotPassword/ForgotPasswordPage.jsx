@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./forgotPasswordPage.module.css";
+import forgotStyles from "./forgotPasswordPage.module.css";
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { RiErrorWarningLine } from "react-icons/ri";
@@ -36,7 +36,7 @@ const ForgotPasswordPage = () => {
       
         <form 
           onSubmit={handleChangePassword} 
-          className='mt-[25%] p-10 w-[85%] rounded-4xl flex-col gap-10 self-center'
+          className={`mt-[25%] p-10 w-[85%] ${forgotStyles['form']} rounded-4xl flex-col gap-10 self-center`}
           >
 
           <h1 className='text-xl text-center text-[#932A98]'>Encryption password change</h1>
@@ -45,9 +45,10 @@ const ForgotPasswordPage = () => {
             characters long
           </p>
 
-          <div>
+          <div className={`${forgotStyles['form-div']}`}>
             <label htmlFor='password'>New password</label>
-            <input 
+            <input
+              className={`${forgotStyles['form-input']}`}
               id='password' 
               name='password' 
               type="password" 
@@ -55,11 +56,12 @@ const ForgotPasswordPage = () => {
               onInput={(e) => e.target.setCustomValidity('')}/>
           </div>
 
-          <div>
+          <div className={`${forgotStyles['form-div']}`}>
             <label htmlFor='newPassword'>Confirm new password</label>
-            <input 
+            <input
+            className={`${forgotStyles['form-input']}`}
               id='newPassword' 
-              name='newPassword' 
+              name='newPassword'
               type="password" 
               required
               onInvalid={(e) => e.target.setCustomValidity("Please type in your password")} 
@@ -67,7 +69,8 @@ const ForgotPasswordPage = () => {
             {warning ? <p className='flex items-center gap-2 text-[#932A98] text-sm text-center'><RiErrorWarningLine /> Passwords must contain the same value</p>: null}
           </div>
 
-          <button 
+          <button
+            className={`${forgotStyles['form-btn']}`}
             disabled={setNewChangedPassword ? false : true} 
             type="submit">Change Password
           </button>
@@ -86,7 +89,7 @@ const ForgotPasswordPage = () => {
           <p className='text-[#932A98] text-2xl w-full'>PASSWORD CHANGED SUCCESFULLY</p>
 
           <button 
-            className='flex justify-center items-center gap-4 self-center p-4 w-[70%]'>
+            className={`flex justify-center bg-[#932A98] text-white rounded-3xl items-center gap-4 self-center p-4 w-[70%]`}>
               Next <FaArrowRightLong />
             </button>
         </div> 
