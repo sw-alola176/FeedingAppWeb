@@ -36,7 +36,7 @@ const ForgotPasswordPage = () => {
       
         <form 
           onSubmit={handleChangePassword} 
-          className={`mt-[25%] p-10 w-[85%] ${forgotStyles['form']} rounded-4xl flex-col gap-10 self-center`}
+          className={`mt-[25%] p-10 w-[85%] ${forgotStyles['forgot']} rounded-4xl flex-col gap-10 self-center`}
           >
 
           <h1 className='text-xl text-center text-[#932A98]'>Encryption password change</h1>
@@ -45,10 +45,10 @@ const ForgotPasswordPage = () => {
             characters long
           </p>
 
-          <div className={`${forgotStyles['form-div']}`}>
+          <div className={`${forgotStyles['forgot-div']}`}>
             <label htmlFor='password'>New password</label>
             <input
-              className={`${forgotStyles['form-input']}`}
+              className={`${forgotStyles['forgot-input']}`}
               id='password' 
               name='password' 
               type="password" 
@@ -56,10 +56,10 @@ const ForgotPasswordPage = () => {
               onInput={(e) => e.target.setCustomValidity('')}/>
           </div>
 
-          <div className={`${forgotStyles['form-div']}`}>
+          <div className={`${forgotStyles['forgot-div']}`}>
             <label htmlFor='newPassword'>Confirm new password</label>
             <input
-            className={`${forgotStyles['form-input']}`}
+            className={`${forgotStyles['forgot-input']}`}
               id='newPassword' 
               name='newPassword'
               type="password" 
@@ -70,7 +70,7 @@ const ForgotPasswordPage = () => {
           </div>
 
           <button
-            className={`${forgotStyles['form-btn']}`}
+            className={`${forgotStyles['forgot-btn']}`}
             disabled={setNewChangedPassword ? false : true} 
             type="submit">Change Password
           </button>
