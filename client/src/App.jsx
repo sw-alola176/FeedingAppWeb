@@ -40,6 +40,10 @@ function App() {
     {
       path: '/forgot',
       element: <ForgotPasswordPage />
+    },
+    {
+      path: '/history',
+      element: <HistoryPage />
     }
   ])
 
