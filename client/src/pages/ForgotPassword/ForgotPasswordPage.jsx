@@ -31,7 +31,7 @@ const ForgotPasswordPage = () => {
       {!newChangedPassword ? 
       <><Link className='flex items-center gap-4 ml-8' to='..'>
           <FaArrowLeftLong className='text-[#932A98] text-2xl'/>
-          <p className='text-xl'>back</p>
+          <p className='text-xl'>Back</p>
         </Link>
       
         <form 
