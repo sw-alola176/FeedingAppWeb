@@ -1,11 +1,10 @@
-import './HomePage.module.css'
-import { Link, NavLink } from "react-router-dom"
+import './HomePage.module.css';
+import { Link, NavLink } from "react-router-dom";
 import { SwitchProvider } from '../../components/switchLight.jsx';
 import { useContext } from 'react';
-import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 import MenuBar from '../../components/MenuBar.jsx';
-import restaurantData from "../../data/restaurantData.js"
-import img from "../../assets/home-page/Ellipse 1.png"
+import restaurantData from "../../data/restaurantData.js";
+import img from "../../assets/home-page/Ellipse 1.png";
 
 const HomePage = () => {
 
@@ -27,7 +26,6 @@ const HomePage = () => {
   return (
     <>
     <div style={style} className='max-w-full h-full m-0 self-center justify-self-center place-content-center  relative p-3 flex flex-col'>
-      <ThemeSwitch />
       <header className='text-center self-center gap-4 w-fit'>
         <div className="flex items-center justify-center">
           <div className="size-[120px] border-[3px] border-[#932A98] -mr-2 rounded-full flex items-center justify-center">

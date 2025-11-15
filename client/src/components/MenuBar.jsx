@@ -9,13 +9,13 @@ const MenuBar = () => {
   const {showMenu, setShowMenu} = useContext(SwitchProvider)
 
   const homeActiveStyle = {
-    color: "#932A98"
+    color: "#fff"
   }
   const historyActiveStyle = {
-    color: "#932A98"
+    color: "#fff"
   }
   const settingsActiveStyle = {
-    color: "#932A98"
+    color: "#fff"
   }
 
   return (

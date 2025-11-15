@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import styles from './Login.module.css'
 import { useState, useContext } from 'react'
 import { SwitchProvider } from '../../components/switchLight.jsx';
-import ThemeSwitch from '../../components/ThemeSwitch.jsx';
 
 const LoginInPage = () => {
 
@@ -36,7 +35,6 @@ const LoginInPage = () => {
   return (
     <>
       <div id="login-container" className={styles["login-container"]} style={style}>
-        <ThemeSwitch />
         <form id="login-form" className={styles["login-form"]} onSubmit={handleSubmit}>
           <h1>Login</h1>
           <input 
