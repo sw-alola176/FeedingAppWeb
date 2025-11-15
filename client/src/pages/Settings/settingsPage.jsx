@@ -40,7 +40,7 @@ const SettingsPage = () => {
           <p className=' text-[18px] self-end mr-5'>{userData.phone}</p>
         </div>
       </div>
-      <div className={`${switchLight ? 'text-white': ''} text-xl`}>
+      <div className={`${switchLight ? 'text-white': ''} text-3`}>
         <p style={{paddingLeft: '33px'}} className='border-t-2 flex items-center border-[#932A98] h-18 w-full'>View Details</p>
         <button 
           onClick={() => setDel(prev => !prev)}
@@ -57,7 +57,12 @@ const SettingsPage = () => {
           </button>
           <p>Dark Mode</p>
         </div>
-        <button disabled={logout || del ? true: false} onClick={() => setLogout(prev => !prev)} style={{paddingLeft: '33px'}} className='border-t-2 w-full cursor-pointer flex items-center justify-start border-b-2 border-[#932A98] h-18'>Log out</button>
+        <button 
+          disabled={logout || del ? true: false} 
+          onClick={() => setLogout(prev => !prev)} 
+          style={{paddingLeft: '33px'}} 
+          className='border-t-2 w-full cursor-pointer flex items-center justify-start border-b-2 border-[#932A98] h-18'
+        >Log out</button>
       </div>
 
       {del ||
