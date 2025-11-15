@@ -8,7 +8,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.form-container input {
   margin-top: 2rem;
+  font-size: 14px;
+  height: 3rem;
 }
 
 .submit-btn {

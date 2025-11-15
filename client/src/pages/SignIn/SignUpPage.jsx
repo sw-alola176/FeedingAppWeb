@@ -57,11 +57,11 @@ const SignInPage = () => {
         && <div 
         id="signup-page-container" 
         style={pageDarkstyle}
-        className={`flex flex-col items-center justify-between w-screen h-screen  bg-[#f5f5f5]`}>
+        className={`flex flex-col items-center justify-center w-screen h-screen  bg-[#f5f5f5]`}>
           <div 
           id="form-container"
           className={`${styles["form-container"]}`}>
-            <h1 className='font-bold text-3xl mt-5 text-[#932A98]'>Sign Up</h1>
+            <h1 className='font-bold text-3xl mt-5 mb-3 text-[#932A98]'>Sign Up</h1>
             <form 
               id="signup-form" 
               className={`h-[85%] w-full flex flex-col items-center justify-center`} 

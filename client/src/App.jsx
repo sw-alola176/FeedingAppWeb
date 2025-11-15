@@ -4,6 +4,7 @@ import NotFoundPage from "./pages/NotFoundPage"
 import SignInPage from "./pages/SignIn/SignUpPage"
 import LogInPage from "./pages/Login/LogInPage"
 import SettingsPage from "./pages/Settings/settingsPage"
+import HistoryPage from "./pages/History/HistoryPage"
 import { SwitchProvider } from "./components/switchLight"
 import { useState } from "react"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -34,6 +35,10 @@ function App() {
     {
       path: '/settings',
       element: <SettingsPage />
+    },
+    {
+      path: '/history',
+      element: <HistoryPage />
     }
   ])
 
