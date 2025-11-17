@@ -33,8 +33,8 @@ const SignInPage = () => {
         method: 'POST',
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(user)
-      }).then((res) => {
-        console.log(res.json());
+      }).then((response) => {
+        console.log(response.json());
         setIsLoading(false)
       })
     }, 1000)
@@ -139,6 +139,7 @@ const SignInPage = () => {
         </div>
 
        || 
+       
         <div className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
           Loading...
         </div>}

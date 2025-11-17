@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import forgotStyles from "./forgotPasswordPage.module.css";
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -29,7 +29,7 @@ const ForgotPasswordPage = () => {
   return (
     <div className='flex flex-col max-w-full h-full'>
       {!newChangedPassword ? 
-      <><Link className='flex items-center gap-4 ml-8' to='..'>
+      <><Link className='flex items-center gap-4 ml-8 mt-5' to='..'>
           <FaArrowLeftLong className='text-[#932A98] text-2xl'/>
           <p className='text-xl'>Back</p>
         </Link>
