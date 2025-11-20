@@ -29,10 +29,7 @@ const HomePage = () => {
 
   useEffect(() => {
       
-    fetch(`http://localhost:5001/api/v1/users/${userId}`, {
-      method: "GET",
-      headers: { "Content-type": "application/json" }
-    })
+    fetch(`http://localhost:5001/api/v1/users/${userId}`)
     .then(response => response.json())
     .then(responseJSON => {
       console.log(responseJSON.success)
@@ -102,7 +99,7 @@ const HomePage = () => {
      
      ||
 
-      <div className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
+      <div className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5] text-fuchsia-800`}>
       Loading...
       </div>
     }

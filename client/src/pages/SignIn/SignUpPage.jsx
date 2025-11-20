@@ -54,7 +54,9 @@ const SignInPage = () => {
   return (
     <>
       {!isLoading 
-        && <div 
+       && 
+       
+        <div 
         id="signup-page-container" 
         style={pageDarkstyle}
         className={`flex flex-col items-center justify-center w-screen h-screen  bg-[#f5f5f5]`}>
@@ -139,7 +141,7 @@ const SignInPage = () => {
         </div>
 
        || 
-       
+
         <div className={`flex flex-col items-center justify-center-safe w-screen h-screen  bg-[#f5f5f5]`}>
           Loading...
         </div>}
